@@ -1,5 +1,4 @@
 $kind: http-request
-name: Existing vehicle is found
 url: "{{baseUrl}}/vehicle/:id"
 method: GET
 pathVariables:

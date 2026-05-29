@@ -1,9 +1,15 @@
+owner: "55278777"
+team: "16176427"
+lastUpdatedBy: "55278777"
+lastRevision: 1780089910000
 name: Prod
+color: 120
 values:
   - key: baseUrl
-    value: 'https://demo.postman-academy.com/v1/safestar'
+    value: https://demo.postman-academy.com/v1/safestar
     enabled: true
   - key: jwtSecret
     value: YS1zdHJpbmctc2VjcmV0LWF0LWxlYXN0LTI1Ni1iaXRzLWxvbmc=
     enabled: true
-color: 120
+createdAt: 2026-05-29T21:00:08.000Z
+updatedAt: 2026-05-29T21:25:10.000Z

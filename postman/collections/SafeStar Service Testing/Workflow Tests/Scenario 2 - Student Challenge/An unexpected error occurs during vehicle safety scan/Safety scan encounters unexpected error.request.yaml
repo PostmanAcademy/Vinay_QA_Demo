@@ -1,5 +1,4 @@
 $kind: http-request
-name: Safety scan encounters unexpected error
 url: "{{baseUrl}}/run"
 method: POST
 headers:

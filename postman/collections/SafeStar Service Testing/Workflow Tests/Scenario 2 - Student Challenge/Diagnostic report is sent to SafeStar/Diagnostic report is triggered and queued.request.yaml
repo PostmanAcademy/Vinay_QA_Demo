@@ -1,5 +1,4 @@
 $kind: http-request
-name: Diagnostic report is triggered and queued
 url: "{{baseUrl}}/diagnostics/generate/:vehicleId"
 method: POST
 headers:

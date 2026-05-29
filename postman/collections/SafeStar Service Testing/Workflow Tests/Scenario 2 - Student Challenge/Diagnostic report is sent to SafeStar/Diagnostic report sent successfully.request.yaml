@@ -1,5 +1,4 @@
 $kind: http-request
-name: Diagnostic report sent successfully
 url: "{{baseUrl}}/diagnostics/send/:id"
 method: POST
 headers:
