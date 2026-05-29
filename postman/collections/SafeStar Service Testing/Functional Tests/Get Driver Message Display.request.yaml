@@ -1,8 +1,4 @@
 $kind: http-request
-name: Get Driver Message Display
-method: GET
-url: '{{baseUrl}}/display'
-order: 15000
 description: |-
   Tests the GET /display endpoint that generates a personalized safety message for a driver.
 
@@ -11,11 +7,11 @@ description: |-
   HTML versions of the message exist, are non-empty strings, and that the HTML is structurally
   valid (contains a <div> tag). An empty or malformed message would mean the personalization
   engine failed silently.
+url: "{{baseUrl}}/display"
+method: GET
 headers:
-  - key: Content-Type
-    value: application/json
-  - key: Accept
-    value: application/json
+  Content-Type: application/json
+  Accept: application/json
 body:
   type: json
   content: |-
@@ -25,7 +21,6 @@ body:
     }
 scripts:
   - type: afterResponse
-    language: text/javascript
     code: |-
       // ─────────────────────────────────────────────────────────────────────────────
       // FUNCTIONAL TEST: Get Driver Message Display
@@ -113,3 +108,5 @@ scripts:
       pm.test("Response time is under 2000ms", function () {
           pm.expect(pm.response.responseTime).to.be.below(2000);
       });
+    language: text/javascript
+order: 15000

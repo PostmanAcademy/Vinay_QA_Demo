@@ -29,6 +29,7 @@ info:
     - **Reporting**: Generate diagnostics for a vehicle, retrieve a diagnostic
     report, and send the report.
 
+
 servers:
   - url: '{{baseUrl}}'
 paths:

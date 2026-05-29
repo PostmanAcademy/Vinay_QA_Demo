@@ -1,9 +1,13 @@
 $kind: http-request
-name: Confirm Vehicle Profile Exists
-url: "{{baseUrl}}/vehicle/:id"
+url: "{{baseUrl}}/display"
 method: GET
-pathVariables:
-  id: "{{vehicleID}}"
+body:
+  type: json
+  content: |-
+    {
+      "driver": "{{driverID}}",
+      "vehicle": "{{vehicleID}}"
+    }
 auth:
   type: jwt
   credentials:
@@ -15,4 +19,4 @@ auth:
     headerPrefix: Bearer
     queryParamKey: token
     header: "{}"
-order: 2000
+order: 4000

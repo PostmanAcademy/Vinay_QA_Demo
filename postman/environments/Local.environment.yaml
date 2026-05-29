@@ -1,9 +1,15 @@
+owner: "55278777"
+team: "16176427"
+lastUpdatedBy: "55278777"
+lastRevision: 1780089909000
 name: Local
+color: 0
 values:
   - key: baseUrl
-    value: 'http://localhost:4500'
+    value: http://localhost:4500
     enabled: true
   - key: jwtSecret
     value: YS1zdHJpbmctc2VjcmV0LWF0LWxlYXN0LTI1Ni1iaXRzLWxvbmc=
     enabled: true
-color: 0
+createdAt: 2026-05-29T21:00:08.000Z
+updatedAt: 2026-05-29T21:25:09.000Z

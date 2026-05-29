@@ -1,8 +1,4 @@
 $kind: http-request
-name: Run Safety Scan
-method: POST
-url: '{{baseUrl}}/run'
-order: 9000
 description: |-
   Tests the POST /run endpoint that initiates a new safety scan for a driver/vehicle pair.
 
@@ -10,11 +6,11 @@ description: |-
   together a driver profile and a vehicle profile to produce a safety assessment. This test
   verifies the scan is accepted (201), starts in QUEUED state, and returns a run ID that
   we save for use in the Get Run Status and Cancel Run requests.
+url: "{{baseUrl}}/run"
+method: POST
 headers:
-  - key: Content-Type
-    value: application/json
-  - key: Accept
-    value: application/json
+  Content-Type: application/json
+  Accept: application/json
 body:
   type: json
   content: |-
@@ -24,7 +20,6 @@ body:
     }
 scripts:
   - type: afterResponse
-    language: text/javascript
     code: |-
       // ─────────────────────────────────────────────────────────────────────────────
       // FUNCTIONAL TEST: Run Safety Scan
@@ -77,3 +72,5 @@ scripts:
       const runId = responseBody.run;
       pm.collectionVariables.set("runId", runId);
       console.log("Saved runId to collection variables:", runId);
+    language: text/javascript
+order: 9000
